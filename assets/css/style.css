@@ -2847,6 +2847,16 @@ body.dark .btn-whatsapp-enquiry {
   color: rgba(255, 255, 255, .75)
 }
 
+.biz-hero h1,
+.biz-hero h2,
+.biz-hero h3 {
+  color: #fff
+}
+
+.biz-hero .lead {
+  color: rgba(255, 255, 255, .85)
+}
+
 .biz-stat {
   text-align: center
 }
