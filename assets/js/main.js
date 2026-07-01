@@ -1328,17 +1328,22 @@ const CustomerStore = {
   get() { try { return JSON.parse(localStorage.getItem(this.key)) || [] } catch (e) { return [] } }
 };
 
-/* Admin credentials are predefined — admin sign up is not allowed. */
-const ADMIN_DEFAULT_CREDENTIALS = {
-  email: 'admin@solehaus.com',
-  password: 'admin123'
+/* Admin accounts — a default admin ships out of the box, and additional
+   admins can now self-register from admin-signup.html. All admin accounts
+   are stored client-side in localStorage (same demo-data model as the rest
+   of the site — see Products, Orders, etc.). */
+const AdminStore = {
+  key: 'solehaus_admins',
+  get() {
+    try {
+      const stored = JSON.parse(localStorage.getItem(this.key));
+      if (Array.isArray(stored) && stored.length) return stored;
+    } catch (e) { /* fall through to default */ }
+    return [{ id: 'A001', name: 'SoleHaus Admin', email: 'admin@solehaus.com', password: 'admin123' }];
+  },
+  save(list) { localStorage.setItem(this.key, JSON.stringify(list)); },
+  nextId(list) { return 'A' + String(list.length + 1).padStart(3, '0'); }
 };
-function getAdminCredentials() {
-  try {
-    const stored = JSON.parse(localStorage.getItem('solehaus_admin_credentials'));
-    return (stored && stored.email && stored.password) ? stored : ADMIN_DEFAULT_CREDENTIALS;
-  } catch (e) { return ADMIN_DEFAULT_CREDENTIALS; }
-}
 
 function loginAdmin(e) {
   e?.preventDefault();
@@ -1350,14 +1355,44 @@ function loginAdmin(e) {
   setFieldError('signinPasswordErr', password ? '' : 'Password is required');
   if (!isValidEmail(email) || !password) ok = false;
   if (!ok) return false;
-  const credentials = getAdminCredentials();
-  if (email !== credentials.email || password !== credentials.password) {
+  const admin = AdminStore.get().find(a => a.email.toLowerCase() === email && a.password === password);
+  if (!admin) {
     setAuthMessage('signinMessage', 'Invalid admin credentials', 'error');
     return false;
   }
-  const admin = { id: 'A001', name: 'SoleHaus Admin', email: credentials.email, role: 'admin' };
-  localStorage.setItem('currentAdmin', JSON.stringify(admin));
+  localStorage.setItem('currentAdmin', JSON.stringify({ id: admin.id, name: admin.name, email: admin.email, role: 'admin' }));
   location.href = 'admin-dashboard.html';
+  return true;
+}
+
+function signupAdmin(e) {
+  e?.preventDefault();
+  const form = document.getElementById('adminSignupForm'); if (!form) return false;
+  const name = form.fullName.value.trim();
+  const email = form.email.value.trim().toLowerCase();
+  const password = form.password.value;
+  const confirm = form.confirmPassword.value;
+  let ok = true;
+
+  setFieldError('fullNameErr', name ? '' : 'Full name is required');
+  setFieldError('signupEmailErr', isValidEmail(email) ? '' : 'Enter a valid email');
+  setFieldError('signupPasswordErr', password.length >= 6 ? '' : 'Password must be at least 6 characters');
+  setFieldError('confirmPasswordErr', confirm === password ? '' : 'Passwords must match');
+  if (!name || !isValidEmail(email) || password.length < 6 || confirm !== password) ok = false;
+
+  const admins = AdminStore.get();
+  if (admins.some(a => a.email.toLowerCase() === email)) {
+    setFieldError('signupEmailErr', 'This email is already registered');
+    ok = false;
+  }
+  if (!ok) return false;
+
+  const admin = { id: AdminStore.nextId(admins), name, email, password };
+  admins.push(admin);
+  AdminStore.save(admins);
+  localStorage.setItem('currentAdmin', JSON.stringify({ id: admin.id, name: admin.name, email: admin.email, role: 'admin' }));
+  setAuthMessage('signupMessage', 'Admin account created! Redirecting...', 'success');
+  setTimeout(() => { location.href = 'admin-dashboard.html'; }, 800);
   return true;
 }
 
@@ -1558,12 +1593,14 @@ function resetAdminPassword(form) {
   if (confirmPassword !== newPassword) ok = false;
   if (!ok) return false;
 
-  const credentials = getAdminCredentials();
-  if (email !== credentials.email) {
+  const admins = AdminStore.get();
+  const admin = admins.find(a => a.email.toLowerCase() === email);
+  if (!admin) {
     setAuthMessage('forgotMessage', 'No admin account found with this email', 'error');
     return false;
   }
-  localStorage.setItem('solehaus_admin_credentials', JSON.stringify({ email, password: newPassword }));
+  admin.password = newPassword;
+  AdminStore.save(admins);
   setAuthMessage('forgotMessage', 'Password updated successfully. Please login again.', 'success');
   form.reset();
   setTimeout(() => { location.href = 'admin-signin.html'; }, 1500);
@@ -1617,6 +1654,7 @@ function renderAdminDashboard() {
    nothing dynamic to wire into the public nav. Just handle the admin bits. */
 function initAuthPages() {
   document.getElementById('adminSigninForm')?.addEventListener('submit', loginAdmin);
+  document.getElementById('adminSignupForm')?.addEventListener('submit', signupAdmin);
   document.querySelectorAll('[data-logout]').forEach(button => button.addEventListener('click', logoutUser));
   document.getElementById('adminMenuToggle')?.addEventListener('click', () => {
     document.getElementById('adminSidebar')?.classList.toggle('open');
