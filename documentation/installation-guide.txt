@@ -1,0 +1,19 @@
+INSTALLATION GUIDE
+==================
+
+1. Extract the zip file.
+2. Open shoe-store/pages/index.html in any modern browser.
+   - Or run a local server: python3 -m http.server 8000
+3. No build step. No dependencies to install.
+
+FILE STRUCTURE
+shoe-store/
+├── index.html (redirect)
+├── sitemap.xml
+├── robots.txt
+├── assets/
+│   ├── css/style.css, dark-mode.css, rtl.css
+│   ├── js/main.js
+│   └── images/, fonts/ (empty - using CDN)
+├── pages/  (11 HTML pages)
+└── documentation/

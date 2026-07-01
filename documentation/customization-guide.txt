@@ -1,0 +1,26 @@
+CUSTOMIZATION GUIDE
+===================
+
+COLORS — edit assets/css/style.css :root variables:
+  --color-primary  : main brand orange
+  --color-text     : text navy
+  --color-section  : light section background
+
+FONTS — change Google Fonts link in each <head>.
+
+LOGO/BRAND NAME — search "SoleHaus" across files.
+
+PRODUCTS — edit the PRODUCTS array at the top of assets/js/main.js.
+Each product: { id, name, brand, cat, price, sizes, img, alt }.
+
+NAVIGATION — edit the NAV block in each page <nav> section.
+
+CONTACT FORM — change form action to your Formspree URL.
+
+NEWSLETTER — replace JS handler with Mailchimp embed code.
+
+GOOGLE MAPS — replace OpenStreetMap iframe in contact.html.
+
+DARK MODE — extend rules in assets/css/dark-mode.css.
+
+RTL — add `dir="rtl"` to <html> in any page to test.

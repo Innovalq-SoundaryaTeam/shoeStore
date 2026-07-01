@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SoleHaus — Premium Shoes & Footwear Store</title>
+<meta name="description" content="Shop premium footwear from top brands. Casual, formal, sports & kids shoes with free shipping over $75.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/dark-mode.css">
+<link rel="stylesheet" href="../assets/css/rtl.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ShoeStore","name":"SoleHaus","url":"https://solehaus.example/","logo":"../assets/images/brands/solehaus-logo.svg","description":"Premium footwear store offering casual, formal, sports and kids shoes from top brands.","telephone":"+91-98765-43210","address":{"@type":"PostalAddress","streetAddress":"42 Sole Street","addressLocality":"Mumbai","addressCountry":"IN"}}</script>
+</head>
+<body>
+  
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar navbar-expand-lg sticky-top site-nav" aria-label="Main navigation">
+  <div class="container">
+    <a class="navbar-brand brand-logo" href="index.html"><i class="fa-solid fa-shoe-prints"></i> SoleHaus</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="products.html">Shop</a></li>
+        <li class="nav-item"><a class="nav-link" href="brands.html">Brands</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+        <li class="nav-item"><a class="nav-link" href="size-guide.html">Size Guide</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="admin-signin.html"><i class="fa-solid fa-user-shield me-1"></i>Admin</a></li>
+      </ul>
+      <form class="d-flex nav-search me-3" role="search" id="navSearch">
+        <input class="form-control" type="search" placeholder="Search shoes..." aria-label="Search" id="searchInput">
+        <button class="btn btn-search" type="submit" aria-label="Search"><i class="fa fa-search"></i></button>
+      </form>
+      <button class="btn-icon" id="themeToggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
+      <a href="products.html#cart" class="btn-icon position-relative" aria-label="View cart">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span class="cart-badge" id="cartBadge">0</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container"><div class="row align-items-center g-5">
+    <div class="col-lg-6">
+      <h1>Step Into <span>Comfort</span>, Walk With <span>Style</span></h1>
+      <p>Discover premium footwear from top brands. Casual, formal, sports — find your perfect pair, delivered with care.</p>
+      <a href="products.html" class="btn btn-primary-orange me-2">Shop Now <i class="fa fa-arrow-right ms-1"></i></a>
+      <a href="brands.html" class="btn btn-outline-orange">Browse Brands</a>
+    </div>
+    <div class="col-lg-6 text-center"><img class="hero-img" src="../assets/images/misc/hero-red-sneaker.webp" alt="Featured red Nike sneaker"></div>
+  </div></div>
+</section>
+<section class="section">
+  <div class="container">
+    <h2 class="section-title text-center">Shop by Category</h2>
+    <p class="section-sub text-center">Find the right pair for every occasion</p>
+    <div class="row g-3"><div class="col-6 col-lg-3"><a href="products.html?cat=casual" class="category-card"><img src="../assets/images/blog/sustainable-footwear.webp" alt="Casual shoes category"><span>Casual</span></a></div><div class="col-6 col-lg-3"><a href="products.html?cat=formal" class="category-card"><img src="../assets/images/blog/casual-vs-formal.webp" alt="Formal shoes category"><span>Formal</span></a></div><div class="col-6 col-lg-3"><a href="products.html?cat=sports" class="category-card"><img src="../assets/images/blog/top-running-shoes.webp" alt="Sports shoes category"><span>Sports</span></a></div><div class="col-6 col-lg-3"><a href="products.html?cat=kids" class="category-card"><img src="../assets/images/blog/kids-sizing-tips.webp" alt="Kids shoes category"><span>Kids</span></a></div></div>
+  </div>
+</section>
+<section class="section section-alt">
+  <div class="container">
+    <h2 class="section-title text-center">Featured Products</h2>
+    <p class="section-sub text-center">Our customers' favourite picks</p>
+    <div class="row g-4" id="featuredGrid"></div>
+    <div class="text-center mt-4"><a href="products.html" class="btn btn-outline-orange">View All</a></div>
+  </div>
+</section>
+<section class="section"><div class="container">
+  <h2 class="section-title text-center">Top Brands</h2>
+  <p class="section-sub text-center">Authentic styles from world-class makers</p>
+  <div class="brand-strip"><span class="brand-chip home-brand-chip">Nike</span><span class="brand-chip home-brand-chip">Adidas</span><span class="brand-chip home-brand-chip">Puma</span><span class="brand-chip home-brand-chip">Asics</span><span class="brand-chip home-brand-chip">Converse</span><span class="brand-chip home-brand-chip">Clarks</span></div>
+</div></section>
+<section class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">New Arrivals</h2>
+    <p class="section-sub">Just landed — scroll to explore</p>
+    <div class="h-scroll" id="arrivalsScroll"></div>
+  </div>
+</section><section class="section"><div class="container"><h2 class="section-title text-center">Why Choose Us</h2><p class="section-sub text-center">More than just shoes</p><div class="row"><div class="col-6 col-lg-3"><div class="icon-box"><i class="fa-solid fa-truck-fast"></i><h5>Free Shipping</h5><p>Orders over $75</p></div></div><div class="col-6 col-lg-3"><div class="icon-box"><i class="fa-solid fa-rotate-left"></i><h5>Easy Returns</h5><p>30-day no-questions</p></div></div><div class="col-6 col-lg-3"><div class="icon-box"><i class="fa-solid fa-shield-halved"></i><h5>Authentic</h5><p>100% original brands</p></div></div><div class="col-6 col-lg-3"><div class="icon-box"><i class="fa-solid fa-headset"></i><h5>24/7 Support</h5><p>Real humans, always</p></div></div></div></div></section><section class="section section-alt"><div class="container"><h2 class="section-title text-center">What Customers Say</h2><p class="section-sub text-center">Real reviews from happy walkers</p><div class="row g-4"><div class="col-md-4"><div class="review"><div class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div><p>"Loved the fit and the fast shipping! My new go-to store."</p><div class="review-author"><img src="../assets/images/testimonials/sarah-j.jpg" alt="Sarah J."><b>Sarah J.</b></div></div></div><div class="col-md-4"><div class="review"><div class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div><p>"Quality is top-notch. Customer service helped me find the right size."</p><div class="review-author"><img src="../assets/images/testimonials/michael-r.jpg" alt="Michael R."><b>Michael R.</b></div></div></div><div class="col-md-4"><div class="review"><div class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div><p>"Stylish, comfortable, and authentic. Highly recommend!"</p><div class="review-author"><img src="../assets/images/testimonials/priya-s.jpg" alt="Priya S."><b>Priya S.</b></div></div></div></div></div></section>
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-lg-4">
+        <h5 class="brand-logo text-white"><i class="fa-solid fa-shoe-prints"></i> SoleHaus</h5>
+        <p>Premium footwear for every step of your journey. Quality, comfort, style.</p>
+        <div class="social">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6>Shop</h6>
+        <ul><li><a href="products.html">All Products</a></li><li><a href="brands.html">Brands</a></li><li><a href="products.html?cat=sports">Sports</a></li><li><a href="products.html?cat=formal">Formal</a></li><li><a href="home-2.html">For Business</a></li></ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6>Help</h6>
+        <ul><li><a href="size-guide.html">Size Guide</a></li><li><a href="contact.html">Contact</a></li><li><a href="about.html">About</a></li><li><a href="blog.html">Blog</a></li></ul>
+      </div>
+      <div class="col-lg-4">
+        <h6>Newsletter</h6>
+        <p>Get exclusive offers and new arrival alerts.</p>
+        <form id="newsletterForm" class="newsletter">
+          <input type="email" class="form-control" placeholder="your@email.com" required aria-label="Email">
+          <button class="btn btn-primary-orange" type="submit">Subscribe</button>
+        </form>
+        <small class="form-msg" id="newsletterMsg"></small>
+      </div>
+    </div>
+    <hr>
+    <p class="text-center mb-0">&copy; 2025 SoleHaus. All rights reserved.</p>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/main.js"></script>
+</body></html>

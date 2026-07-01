@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Services — SoleHaus</title>
+  <meta name="description"
+    content="SoleHaus services: custom shoe fitting, bulk & corporate orders, shoe cleaning, home delivery, gift wrapping and our VIP membership program.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","itemListElement":[{"@type":"Service","position":1,"name":"Custom Shoe Fitting & Consultation"},{"@type":"Service","position":2,"name":"Bulk & Corporate Orders"},{"@type":"Service","position":3,"name":"Shoe Cleaning & Restoration"},{"@type":"Service","position":4,"name":"Home Delivery & Try-at-Home"},{"@type":"Service","position":5,"name":"Gift Wrapping & Corporate Gifting"},{"@type":"Service","position":6,"name":"VIP Membership Program"}]}</script>
+</head>
+
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar navbar-expand-lg sticky-top site-nav" aria-label="Main navigation">
+    <div class="container">
+      <a class="navbar-brand brand-logo" href="index.html"><i class="fa-solid fa-shoe-prints"></i> SoleHaus</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="brands.html">Brands</a></li>
+          <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <form class="d-flex nav-search me-3" role="search" id="navSearch">
+          <input class="form-control" type="search" placeholder="Search shoes..." aria-label="Search" id="searchInput">
+          <button class="btn btn-search" type="submit" aria-label="Search"><i class="fa fa-search"></i></button>
+        </form>
+        <button class="btn-icon" id="themeToggle" aria-label="Toggle dark mode"><i
+            class="fa-solid fa-moon"></i></button>
+        <a href="products.html#cart" class="btn-icon position-relative" aria-label="View cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <div class="container">
+      <h1 class="section-title">Services</h1>
+      <p class="page-breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; Services</p>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES GRID ===== -->
+  <section class="section pt-0">
+    <div class="container">
+      <p class="section-sub text-center">More than a shoe store — support for every step of the journey</p>
+      <div class="row g-4">
+
+        <div class="col-md-6 col-lg-4">
+          <a href="service-details.html?service=custom-fitting" class="d-block text-reset text-decoration-none">
+            <div class="service-card">
+              <div class="service-icon"><i class="fa-solid fa-ruler-combined"></i></div>
+              <h5>Custom Shoe Fitting &amp; Consultation</h5>
+              <p>One-on-one fitting sessions with a specialist to find your true size, width and best-fit style —
+                in-store or by video call.</p>
+              <span class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <a href="service-details.html?service=bulk-orders" class="d-block text-reset text-decoration-none">
+            <div class="service-card">
+              <div class="service-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
+              <h5>Bulk &amp; Corporate Orders</h5>
+              <p>Outfit your whole team or event with volume pricing, dedicated account support and flexible
+                invoicing for 20+ pairs.</p>
+              <span class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <a href="service-details.html?service=shoe-care" class="d-block text-reset text-decoration-none">
+            <div class="service-card">
+              <div class="service-icon"><i class="fa-solid fa-soap"></i></div>
+              <h5>Shoe Cleaning &amp; Restoration</h5>
+              <p>Professional deep-cleaning, sole restoration and leather conditioning to keep every pair looking
+                new.</p>
+              <span class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <a href="service-details.html?service=home-delivery" class="d-block text-reset text-decoration-none">
+            <div class="service-card">
+              <div class="service-icon"><i class="fa-solid fa-truck-fast"></i></div>
+              <h5>Home Delivery &amp; Try-at-Home</h5>
+              <p>Order multiple sizes, try them at home, and only pay for what you keep. Free returns on the
+                rest.</p>
+              <span class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <a href="service-details.html?service=gift-wrapping" class="d-block text-reset text-decoration-none">
+            <div class="service-card">
+              <div class="service-icon"><i class="fa-solid fa-gift"></i></div>
+              <h5>Gift Wrapping &amp; Corporate Gifting</h5>
+              <p>Premium gift wrapping, personalized notes and branded corporate gifting boxes for clients and
+                staff.</p>
+              <span class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <a href="service-details.html?service=vip-membership" class="d-block text-reset text-decoration-none">
+            <div class="service-card">
+              <div class="service-icon"><i class="fa-solid fa-crown"></i></div>
+              <h5>VIP Membership Program</h5>
+              <p>Join SoleHaus VIP for early access to drops, exclusive discounts and a dedicated personal
+                stylist.</p>
+              <span class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="text-center mt-5">
+        <p class="text-muted mb-2">Need something custom for your business?</p>
+        <a href="contact.html?product=Bulk%20Order%20Enquiry" class="btn btn-primary-orange">Talk to Our Team</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-4">
+          <h5 class="brand-logo text-white"><i class="fa-solid fa-shoe-prints"></i> SoleHaus</h5>
+          <p>Premium footwear for every step of your journey. Quality, comfort, style.</p>
+          <div class="social">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Shop</h6>
+          <ul>
+            <li><a href="products.html">All Products</a></li>
+            <li><a href="brands.html">Brands</a></li>
+            <li><a href="products.html?cat=sports">Sports</a></li>
+            <li><a href="products.html?cat=formal">Formal</a></li>
+            <li><a href="home-2.html">For Business</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Help</h6>
+          <ul>
+            <li><a href="size-guide.html">Size Guide</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h6>Newsletter</h6>
+          <p>Get exclusive offers and new arrival alerts.</p>
+          <form id="newsletterForm" class="newsletter">
+            <input type="email" class="form-control" placeholder="your@email.com" required aria-label="Email">
+            <button class="btn btn-primary-orange" type="submit">Subscribe</button>
+          </form>
+          <small class="form-msg" id="newsletterMsg"></small>
+        </div>
+      </div>
+      <hr>
+      <p class="text-center mb-0">&copy; 2025 SoleHaus. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

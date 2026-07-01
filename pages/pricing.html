@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Pricing — SoleHaus VIP Membership</title>
+  <meta name="description"
+    content="Compare SoleHaus VIP membership plans — Silver, Gold and Platinum — for points, discounts, free shipping and early access to drops.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar navbar-expand-lg sticky-top site-nav" aria-label="Main navigation">
+    <div class="container">
+      <a class="navbar-brand brand-logo" href="index.html"><i class="fa-solid fa-shoe-prints"></i> SoleHaus</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="brands.html">Brands</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link active" href="pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <form class="d-flex nav-search me-3" role="search" id="navSearch">
+          <input class="form-control" type="search" placeholder="Search shoes..." aria-label="Search" id="searchInput">
+          <button class="btn btn-search" type="submit" aria-label="Search"><i class="fa fa-search"></i></button>
+        </form>
+        <button class="btn-icon" id="themeToggle" aria-label="Toggle dark mode"><i
+            class="fa-solid fa-moon"></i></button>
+        <a href="products.html#cart" class="btn-icon position-relative" aria-label="View cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <div class="container text-center">
+      <h1 class="section-title">SoleHaus VIP Membership</h1>
+      <p class="section-sub">Points, discounts and early access — pick the plan that fits how you shop</p>
+    </div>
+  </section>
+
+  <!-- ===== PRICING GRID ===== -->
+  <section class="section pt-0">
+    <div class="container">
+      <div class="pricing-grid" id="pricingGrid"></div>
+      <p class="text-center text-muted mt-4 mb-0">Prices in USD. Gold and Platinum are billed annually and can be
+        cancelled anytime.</p>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title text-center">Membership FAQs</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="accordion" id="pricingFaqs">
+            <div class="accordion-item">
+              <h2 class="accordion-header"><button class="accordion-button" data-bs-target="#pfaq0"
+                  data-bs-toggle="collapse" type="button">Can I switch plans later?</button></h2>
+              <div class="accordion-collapse collapse show" data-bs-parent="#pricingFaqs" id="pfaq0">
+                <div class="accordion-body">Yes — upgrade or downgrade anytime from your account. Changes apply to
+                  your next billing cycle.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-target="#pfaq1"
+                  data-bs-toggle="collapse" type="button">Is Silver really free forever?</button></h2>
+              <div class="accordion-collapse collapse" data-bs-parent="#pricingFaqs" id="pfaq1">
+                <div class="accordion-body">Yes. Silver has no cost and no expiration — you still earn points and a
+                  birthday reward with every purchase.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-target="#pfaq2"
+                  data-bs-toggle="collapse" type="button">Do discounts stack with sale prices?</button></h2>
+              <div class="accordion-collapse collapse" data-bs-parent="#pricingFaqs" id="pfaq2">
+                <div class="accordion-body">Member discounts apply on top of regular prices and most seasonal sales,
+                  excluding clearance items marked final sale.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="section">
+    <div class="container text-center">
+      <h3 class="mb-2">Have a question before you join?</h3>
+      <p class="text-muted mb-4">Reach out and we'll help you pick the right plan.</p>
+      <a href="contact.html" class="btn btn-outline-orange">Contact Us</a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-4">
+          <h5 class="brand-logo text-white"><i class="fa-solid fa-shoe-prints"></i> SoleHaus</h5>
+          <p>Premium footwear for every step of your journey. Quality, comfort, style.</p>
+          <div class="social">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Shop</h6>
+          <ul>
+            <li><a href="products.html">All Products</a></li>
+            <li><a href="brands.html">Brands</a></li>
+            <li><a href="products.html?cat=sports">Sports</a></li>
+            <li><a href="products.html?cat=formal">Formal</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Help</h6>
+          <ul>
+            <li><a href="size-guide.html">Size Guide</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h6>Newsletter</h6>
+          <p>Get exclusive offers and new arrival alerts.</p>
+          <form id="newsletterForm" class="newsletter">
+            <input type="email" class="form-control" placeholder="your@email.com" required aria-label="Email">
+            <button class="btn btn-primary-orange" type="submit">Subscribe</button>
+          </form>
+          <small class="form-msg" id="newsletterMsg"></small>
+        </div>
+      </div>
+      <hr>
+      <p class="text-center mb-0">&copy; 2025 SoleHaus. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

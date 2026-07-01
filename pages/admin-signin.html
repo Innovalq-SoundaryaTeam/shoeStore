@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin Sign In - SoleHaus</title>
+<meta name="description" content="Sign in to the SoleHaus admin dashboard.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/dark-mode.css">
+<link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body>
+<button class="btn-icon auth-toggle" id="themeToggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
+<main class="auth-page">
+  <section class="auth-card" aria-labelledby="signinTitle">
+    <div class="auth-logo">
+      <a class="brand-logo" href="index.html"><i class="fa-solid fa-shoe-prints"></i> SoleHaus</a>
+    </div>
+    <h1 class="auth-card-title text-center" id="signinTitle"><i class="fa-solid fa-user-shield me-2"></i>Admin Sign In</h1>
+    <p class="auth-helper text-center">Sign in to manage the SoleHaus dashboard.</p>
+    <div class="auth-alert error d-none" id="signinMessage" role="alert"></div>
+    <form id="adminSigninForm" novalidate>
+      <div class="mb-3">
+        <label for="signinEmail" class="form-label">Admin Email</label>
+        <input type="email" class="form-control" id="signinEmail" name="email" autocomplete="email" required>
+        <small class="field-error" id="signinEmailErr"></small>
+      </div>
+      <div class="mb-2">
+        <label for="signinPassword" class="form-label">Password</label>
+        <input type="password" class="form-control" id="signinPassword" name="password" autocomplete="current-password" required>
+        <small class="field-error" id="signinPasswordErr"></small>
+      </div>
+      <p class="text-end mb-3"><a href="admin-forgot-password.html">Forgot Password?</a></p>
+      <button type="submit" class="btn btn-primary-orange w-100">Login as Admin</button>
+    </form>
+    <p class="auth-helper text-center mt-4 mb-0">Default: <strong>admin@solehaus.com</strong> / <strong>admin123</strong></p>
+  </section>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
