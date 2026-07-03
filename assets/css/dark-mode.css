@@ -18,7 +18,9 @@ body.dark{
   --sidebar-logo:#ffffff;
   --sidebar-footer-text:#94a3b8;
 }
-body.dark .site-nav{background:#0f172a;border-bottom:1px solid #1e293b}
+body.dark .site-nav{background:#0f172a!important;border-bottom:1px solid #1e293b}
+body.dark .site-nav .navbar-toggler-icon{filter:invert(1) brightness(1.8)}
+body.dark .site-nav .navbar-toggler{border-color:#334155}
 body.dark .hero{background:linear-gradient(120deg,#1e293b,#0f172a)}
 body.dark .brand-chip{background:#1e293b;color:#e2e8f0}
 body.dark .home-brand-chip,body.dark .home-brand-chip:hover,body.dark .home-brand-chip:active,body.dark .home-brand-chip:focus{background:#fff;color:#1B2A4A;transform:none;box-shadow:var(--shadow-sm)}

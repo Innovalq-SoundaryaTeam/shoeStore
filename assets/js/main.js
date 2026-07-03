@@ -172,6 +172,30 @@ function toggleTheme() {
 }
 window.toggleTheme = toggleTheme;
 
+/* ----- RTL / LTR direction ----- */
+const rtlBtns = document.querySelectorAll('#rtlToggle,[data-rtl-toggle]');
+function applyDir(d) {
+  document.documentElement.setAttribute('dir', d);
+  rtlBtns.forEach(rtlBtn => {
+    rtlBtn.innerHTML = d === 'rtl'
+      ? '<i class="fa-solid fa-align-right"></i>'
+      : '<i class="fa-solid fa-align-left"></i>';
+    rtlBtn.setAttribute('aria-label', d === 'rtl' ? 'Switch to left-to-right' : 'Switch to right-to-left');
+  });
+}
+applyDir(localStorage.getItem('siteDir') || 'ltr');
+rtlBtns.forEach(rtlBtn => rtlBtn.addEventListener('click', () => {
+  const d = document.documentElement.getAttribute('dir') === 'rtl' ? 'ltr' : 'rtl';
+  localStorage.setItem('siteDir', d);
+  applyDir(d);
+}));
+function toggleDir() {
+  const d = document.documentElement.getAttribute('dir') === 'rtl' ? 'ltr' : 'rtl';
+  localStorage.setItem('siteDir', d);
+  applyDir(d);
+}
+window.toggleDir = toggleDir;
+
 /* ----- Search ----- */
 document.getElementById('navSearch')?.addEventListener('submit', e => {
   e.preventDefault();

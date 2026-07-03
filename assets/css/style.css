@@ -1605,6 +1605,19 @@ body.dark .btn-whatsapp-enquiry {
   box-shadow: var(--shadow-sm)
 }
 
+.auth-toggle#rtlToggle {
+  right: 68px;
+}
+
+html[dir="rtl"] .auth-toggle {
+  right: auto;
+  left: 22px;
+}
+
+html[dir="rtl"] .auth-toggle#rtlToggle {
+  left: 68px;
+}
+
 .auth-card {
   width: min(440px, calc(100% - 32px));
   margin: 0 auto;
