@@ -1,5 +1,35 @@
 {
   "redirects": [
-    { "source": "/", "destination": "/pages/index.html", "permanent": false }
+    { "source": "/", "destination": "/index.html", "permanent": false }
+  ],
+  "rewrites": [
+    { "source": "/index.html", "destination": "/pages/index.html" },
+    { "source": "/home-2.html", "destination": "/pages/home-2.html" },
+    { "source": "/products.html", "destination": "/pages/products.html" },
+    { "source": "/product-details.html", "destination": "/pages/product-details.html" },
+    { "source": "/brands.html", "destination": "/pages/brands.html" },
+    { "source": "/services.html", "destination": "/pages/services.html" },
+    { "source": "/service-details.html", "destination": "/pages/service-details.html" },
+    { "source": "/pricing.html", "destination": "/pages/pricing.html" },
+    { "source": "/size-guide.html", "destination": "/pages/size-guide.html" },
+    { "source": "/blog.html", "destination": "/pages/blog.html" },
+    { "source": "/blog-details.html", "destination": "/pages/blog-details.html" },
+    { "source": "/about.html", "destination": "/pages/about.html" },
+    { "source": "/contact.html", "destination": "/pages/contact.html" },
+    { "source": "/checkout.html", "destination": "/pages/checkout.html" },
+    { "source": "/404.html", "destination": "/pages/404.html" },
+    { "source": "/coming-soon.html", "destination": "/pages/coming-soon.html" },
+    { "source": "/signin.html", "destination": "/pages/signin.html" },
+    { "source": "/signup.html", "destination": "/pages/signup.html" },
+    { "source": "/forgot-password.html", "destination": "/pages/forgot-password.html" },
+    { "source": "/admin-signin.html", "destination": "/pages/admin-signin.html" },
+    { "source": "/admin-signup.html", "destination": "/pages/admin-signup.html" },
+    { "source": "/admin-forgot-password.html", "destination": "/pages/admin-forgot-password.html" },
+    { "source": "/admin-dashboard.html", "destination": "/pages/admin-dashboard.html" },
+    { "source": "/customer-signin.html", "destination": "/pages/customer-signin.html" },
+    { "source": "/customer-signup.html", "destination": "/pages/customer-signup.html" },
+    { "source": "/customer-forgot-password.html", "destination": "/pages/customer-forgot-password.html" },
+    { "source": "/customer-profile.html", "destination": "/pages/customer-profile.html" },
+    { "source": "/customer-orders.html", "destination": "/pages/customer-orders.html" }
   ]
 }
