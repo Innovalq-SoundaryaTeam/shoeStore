@@ -1553,7 +1553,7 @@ const ProductModal = {
     document.getElementById('productPrice').value = product ? product.price : '';
     document.getElementById('productImage').value = product ? product.img : '';
     document.getElementById('productAlt').value = product ? (product.alt || '') : '';
-    document.getElementById('productSizesErr').textContent = '';
+    ['productNameErr', 'productBrandErr', 'productPriceErr', 'productImageErr', 'productSizesErr'].forEach(id => setFieldError(id, ''));
     const sizeSet = new Set(product ? product.sizes : []);
     document.querySelectorAll('#productSizeCheck input[type=checkbox]').forEach(cb => {
       cb.checked = sizeSet.has(+cb.value);
@@ -1571,10 +1571,17 @@ const ProductModal = {
     const sizesErr = document.getElementById('productSizesErr');
 
     let ok = true;
-    if (!name || !brand || !img || !price || price <= 0) ok = false;
+    setFieldError('productNameErr', name ? '' : 'Product name is required');
+    if (!name) ok = false;
+    setFieldError('productBrandErr', brand ? '' : 'Brand is required');
+    if (!brand) ok = false;
+    setFieldError('productPriceErr', price > 0 ? '' : 'Enter a valid price');
+    if (!(price > 0)) ok = false;
+    setFieldError('productImageErr', img ? '' : 'Image path/URL is required');
+    if (!img) ok = false;
     if (!sizes.length) { sizesErr.textContent = 'Select at least one size'; ok = false; }
     else sizesErr.textContent = '';
-    if (!ok) return;
+    if (!ok) { toast('Please fill all required fields'); return; }
 
     if (this.editingId) {
       const idx = PRODUCTS.findIndex(p => p.id === this.editingId);

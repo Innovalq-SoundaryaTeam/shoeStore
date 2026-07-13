@@ -381,10 +381,12 @@
             <div class="col-12">
               <label class="form-label" for="productName">Product Name *</label>
               <input type="text" class="form-control" id="productName" required>
+              <small class="field-error" id="productNameErr"></small>
             </div>
             <div class="col-md-6">
               <label class="form-label" for="productBrand">Brand *</label>
               <input type="text" class="form-control" id="productBrand" required>
+              <small class="field-error" id="productBrandErr"></small>
             </div>
             <div class="col-md-6">
               <label class="form-label" for="productCategory">Category *</label>
@@ -398,10 +400,12 @@
             <div class="col-md-6">
               <label class="form-label" for="productPrice">Price ($) *</label>
               <input type="number" min="1" step="1" class="form-control" id="productPrice" required>
+              <small class="field-error" id="productPriceErr"></small>
             </div>
             <div class="col-md-6">
               <label class="form-label" for="productImage">Image Path / URL *</label>
               <input type="text" class="form-control" id="productImage" placeholder="../assets/images/products/example.webp" required>
+              <small class="field-error" id="productImageErr"></small>
             </div>
             <div class="col-12">
               <label class="form-label" for="productAlt">Image Alt Text</label>
