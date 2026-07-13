@@ -125,11 +125,12 @@ const Cart = {
     this.updateBadge();
     if (document.getElementById('cartList')) renderCart();
   },
-  add(id, size = null) {
+  add(id, size = null, qty = 1) {
+    qty = Math.max(1, qty | 0 || 1);
     const cart = this.get();
     const found = cart.find(i => i.id === id && i.size === size);
-    if (found) found.qty++; else cart.push({ id, size, qty: 1 });
-    this.save(cart); toast('Added to cart');
+    if (found) found.qty += qty; else cart.push({ id, size, qty });
+    this.save(cart); toast(qty > 1 ? `Added ${qty} to cart` : 'Added to cart');
   },
   remove(id, size) { this.save(this.get().filter(i => !(i.id === id && i.size === size))); render(); },
   setQty(id, size, qty) {
@@ -1242,20 +1243,20 @@ function loadDetail() {
     sizes.querySelectorAll('button').forEach(x => x.classList.remove('active'));
     b.classList.add('active');
   }));
+  const qi = document.getElementById('dQty');
   document.getElementById('dAdd').addEventListener('click', () => {
     const sz = sizes.querySelector('button.active');
-    Cart.add(p.id, sz ? +sz.textContent : null);
+    Cart.add(p.id, sz ? +sz.textContent : null, +qi.value || 1);
   });
   // Buy Now: add this product (with selected size) to the cart, then go
   // straight to checkout — no login required (guest checkout).
   document.getElementById('buyNow')?.addEventListener('click', e => {
     e.preventDefault();
     const sz = sizes.querySelector('button.active');
-    Cart.add(p.id, sz ? +sz.textContent : null);
+    Cart.add(p.id, sz ? +sz.textContent : null, +qi.value || 1);
     window.location.href = 'checkout.html';
   });
   // qty
-  const qi = document.getElementById('dQty');
   document.getElementById('qtyMinus').addEventListener('click', () => { qi.value = Math.max(1, +qi.value - 1); });
   document.getElementById('qtyPlus').addEventListener('click', () => { qi.value = +qi.value + 1; });
 }
