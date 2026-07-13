@@ -175,6 +175,15 @@ img {
   transform: scaleX(1)
 }
 
+.site-nav .nav-link.active {
+  color: var(--color-primary) !important;
+  font-weight: 700
+}
+
+.site-nav .nav-link.active::after {
+  transform: scaleX(1)
+}
+
 .site-nav .dropdown-toggle::after {
   vertical-align: .12em
 }
