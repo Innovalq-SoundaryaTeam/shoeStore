@@ -132,6 +132,12 @@ const Cart = {
     this.save(cart); toast('Added to cart');
   },
   remove(id, size) { this.save(this.get().filter(i => !(i.id === id && i.size === size))); render(); },
+  setQty(id, size, qty) {
+    const cart = this.get();
+    if (qty < 1) { this.save(cart.filter(i => !(i.id === id && i.size === size))); render(); return; }
+    const found = cart.find(i => i.id === id && i.size === size);
+    if (found) { found.qty = qty; this.save(cart); }
+  },
   count() { return this.get().reduce((s, i) => s + i.qty, 0); },
   updateBadge() {
     document.querySelectorAll('#cartBadge').forEach(b => { b.textContent = this.count(); });
@@ -1268,7 +1274,12 @@ function renderCart() {
       <img src="${p.img}" alt="${p.alt}" class="cart-thumb">
       <div class="flex-grow-1">
         <div class="fw-bold">${p.name}</div>
-        <small class="text-muted">${p.brand}${item.size ? ' · Size ' + item.size : ''} · Qty ${item.qty}</small>
+        <small class="text-muted">${p.brand}${item.size ? ' · Size ' + item.size : ''}</small>
+        <div class="qty-picker qty-picker-sm mt-1">
+          <button type="button" data-qty-dec="${p.id}" data-qty-size="${item.size || ''}" aria-label="Decrease quantity">−</button>
+          <input aria-label="quantity" value="${item.qty}" data-qty-input="${p.id}" data-qty-size2="${item.size || ''}" inputmode="numeric">
+          <button type="button" data-qty-inc="${p.id}" data-qty-size="${item.size || ''}" aria-label="Increase quantity">+</button>
+        </div>
       </div>
       <div class="fw-bold">$${p.price * item.qty}</div>
       <button class="btn btn-sm btn-outline-orange" data-rm="${p.id}" data-rms="${item.size || ''}" aria-label="Remove"><i class="fa fa-trash"></i></button>
@@ -1276,6 +1287,23 @@ function renderCart() {
   }).join('');
   document.getElementById('cartTotal').textContent = '$' + tot;
   list.querySelectorAll('[data-rm]').forEach(b => b.addEventListener('click', () => Cart.remove(+b.dataset.rm, b.dataset.rms ? +b.dataset.rms : null)));
+  list.querySelectorAll('[data-qty-dec]').forEach(b => b.addEventListener('click', () => {
+    const cart = Cart.get();
+    const item = cart.find(i => i.id === +b.dataset.qtyDec && (i.size || '') === b.dataset.qtySize);
+    if (item) Cart.setQty(item.id, item.size, item.qty - 1);
+  }));
+  list.querySelectorAll('[data-qty-inc]').forEach(b => b.addEventListener('click', () => {
+    const cart = Cart.get();
+    const item = cart.find(i => i.id === +b.dataset.qtyInc && (i.size || '') === b.dataset.qtySize);
+    if (item) Cart.setQty(item.id, item.size, item.qty + 1);
+  }));
+  list.querySelectorAll('[data-qty-input]').forEach(inp => inp.addEventListener('change', () => {
+    const id = +inp.dataset.qtyInput, size = inp.dataset.qtySize2;
+    const cart = Cart.get();
+    const item = cart.find(i => i.id === id && (i.size || '') === size);
+    const val = Math.max(0, parseInt(inp.value, 10) || 0);
+    if (item) Cart.setQty(item.id, item.size, val);
+  }));
 }
 
 /* ----- Contact form validation ----- */

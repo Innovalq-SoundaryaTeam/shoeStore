@@ -1298,6 +1298,22 @@ body.dark .btn-whatsapp-enquiry {
   color: var(--color-text)
 }
 
+.qty-picker-sm {
+  transform: scale(.8);
+  transform-origin: left
+}
+
+.qty-picker-sm button {
+  width: 28px;
+  height: 28px;
+  font-size: .9rem
+}
+
+.qty-picker-sm input {
+  width: 34px;
+  font-size: .85rem
+}
+
 .cart-thumb {
   width: 60px;
   height: 60px;
