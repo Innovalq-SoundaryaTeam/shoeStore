@@ -1433,7 +1433,11 @@ body.dark .btn-whatsapp-enquiry {
 
 /* ===== CONTENT HELPERS ===== */
 .rounded-media {
-  border-radius: 12px
+  border-radius: 12px;
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  object-fit: cover
 }
 
 .measuring-guide {
