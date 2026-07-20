@@ -130,8 +130,10 @@ img {
   padding: .75rem 0
 }
 
-.brand-logo {
-  color: var(--color-primary);
+.brand-logo,
+.brand-logo:hover,
+.brand-logo:focus {
+  color: var(--color-primary) !important;
   font-weight: 800;
   font-size: 1.5rem
 }
@@ -1119,7 +1121,8 @@ body.dark .btn-whatsapp-enquiry {
   height: 38px;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, .08);
+  background: rgba(255, 255, 255, .12);
+  color: #ffffff;
   border-radius: 50%;
   margin-right: .4rem;
   transition: var(--t)
@@ -1440,14 +1443,30 @@ body.dark .btn-whatsapp-enquiry {
 
 .contact-map {
   width: 100%;
-  height: 240px;
+  height: 300px;
   border: 0;
-  border-radius: 12px
+  border-radius: 12px;
+  position: relative;
+  z-index: 0
+}
+
+.contact-sidebar {
+  position: static
 }
 
 .brand-icon {
   font-size: 1.8rem;
   color: var(--color-primary)
+}
+
+.brand-logo-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 40px;
+  width: auto;
+  max-width: 90px;
+  object-fit: contain
 }
 
 .featured-brand-img {
@@ -1754,7 +1773,57 @@ html[dir="rtl"] .auth-toggle#rtlToggle {
 
 .auth-helper {
   color: var(--color-muted);
-  margin-bottom: 1.5rem
+  margin-bottom: 1rem;
+  font-size: .92rem;
+  line-height: 1.4
+}
+
+.social-auth-divider {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  margin: 1.25rem 0 1rem;
+  color: var(--color-muted);
+  font-size: .82rem;
+  text-transform: uppercase;
+  letter-spacing: .04em
+}
+
+.social-auth-divider::before,
+.social-auth-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--color-border)
+}
+
+.social-auth-buttons {
+  display: flex;
+  gap: .75rem
+}
+
+.btn-social {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  padding: .6rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 50px;
+  background: var(--color-card);
+  color: var(--color-text);
+  font-weight: 600;
+  transition: var(--t)
+}
+
+.btn-social:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary)
+}
+
+.btn-social i {
+  font-size: 1.05rem
 }
 
 .auth-alert {

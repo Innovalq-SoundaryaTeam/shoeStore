@@ -12,10 +12,10 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="../assets/css/style.css">
 <link rel="stylesheet" href="../assets/css/dark-mode.css">
+<link rel="icon" type="image/svg+xml" href="../assets/images/brands/solehaus-logo.svg">
 <link rel="stylesheet" href="../assets/css/rtl.css">
 </head>
 <body>
-<button class="btn-icon auth-toggle" id="themeToggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
 <button class="btn-icon auth-toggle" id="rtlToggle" aria-label="Switch to right-to-left"><i class="fa-solid fa-align-left"></i></button>
 <main class="auth-page">
   <section class="auth-card" aria-labelledby="registerTitle">
@@ -47,6 +47,11 @@
         <small class="field-error" id="registerConfirmErr"></small>
       </div>
       <button type="submit" class="btn btn-primary-orange w-100">Register</button>
+      <div class="social-auth-divider"><span>or continue with</span></div>
+      <div class="social-auth-buttons">
+        <button type="button" class="btn-social" id="googleRegisterBtn"><i class="fa-brands fa-google"></i> Google</button>
+        <button type="button" class="btn-social" id="appleRegisterBtn"><i class="fa-brands fa-apple"></i> Apple</button>
+      </div>
     </form>
     <p class="text-center mt-4 mb-0">Already have an account? <a href="signin.html">Login</a></p>
   </section>
@@ -79,6 +84,16 @@
     if (!ok) { msg.classList.add('d-none'); return; }
 
     msg.textContent = 'Demo only — this template page does not create a real account.';
+    msg.className = 'auth-alert success';
+  });
+  document.getElementById('googleRegisterBtn').addEventListener('click', function () {
+    const msg = document.getElementById('registerMessage');
+    msg.textContent = 'Demo only — Google sign-up is not connected in this template.';
+    msg.className = 'auth-alert success';
+  });
+  document.getElementById('appleRegisterBtn').addEventListener('click', function () {
+    const msg = document.getElementById('registerMessage');
+    msg.textContent = 'Demo only — Apple sign-up is not connected in this template.';
     msg.className = 'auth-alert success';
   });
 </script>
