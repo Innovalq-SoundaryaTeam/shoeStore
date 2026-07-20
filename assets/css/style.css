@@ -2777,12 +2777,23 @@ html[dir="rtl"] .auth-toggle#rtlToggle {
 }
 
 /* ===== SERVICES PAGE ===== */
+.service-card,
+.service-card-link {
+  height: 100%
+}
+
+.service-card-link {
+  display: flex
+}
+
 .service-card {
   background: var(--color-card, #fff);
   border: 1px solid var(--color-border);
   border-radius: 16px;
   padding: 28px 26px;
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   transition: var(--t)
 }
 
@@ -2841,7 +2852,8 @@ html[dir="rtl"] .auth-toggle#rtlToggle {
   text-decoration: none;
   display: inline-flex;
   align-items: center;
-  gap: 6px
+  gap: 6px;
+  margin-top: auto
 }
 
 .service-card .service-link i {
