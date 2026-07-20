@@ -2764,6 +2764,12 @@ html[dir="rtl"] .auth-toggle#rtlToggle {
   margin-bottom: .25rem
 }
 
+.page-hero-sub {
+  color: var(--color-muted);
+  max-width: 620px;
+  margin-bottom: .75rem
+}
+
 .page-breadcrumb {
   color: var(--color-muted);
   font-size: .9rem;
