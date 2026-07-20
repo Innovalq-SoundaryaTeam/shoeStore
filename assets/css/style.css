@@ -1561,6 +1561,34 @@ body.dark .btn-whatsapp-enquiry {
 }
 
 /* ===== RESPONSIVE ===== */
+/* Tighten the desktop nav at the 992-1199px range so 9 links + icons +
+   Login + cart fit on one line without overflow-driven wrapping/misalignment. */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .brand-logo,
+  .brand-logo:hover,
+  .brand-logo:focus {
+    font-size: 1.2rem
+  }
+
+  .site-nav .navbar-nav {
+    gap: 0
+  }
+
+  .site-nav .nav-link {
+    padding: .4rem .4rem !important;
+    font-size: .88rem
+  }
+
+  .site-nav .btn-sm {
+    padding: .3rem .55rem;
+    font-size: .8rem
+  }
+
+  .btn-icon {
+    padding: .5rem .4rem
+  }
+}
+
 @media(max-width:991px) {
   .site-nav .container {
     max-width: 100%;
@@ -1571,6 +1599,21 @@ body.dark .btn-whatsapp-enquiry {
 
   .site-nav .navbar-toggler {
     order: -1
+  }
+
+  /* Turn the mobile menu into a floating overlay panel so opening it
+     doesn't push the hero/page content downward. */
+  .site-nav .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    box-shadow: var(--shadow-md);
+    padding: 1rem 1.25rem 1.25rem;
+    max-height: calc(100vh - 64px);
+    overflow-y: auto;
+    z-index: 1030
   }
 
   .nav-search {
