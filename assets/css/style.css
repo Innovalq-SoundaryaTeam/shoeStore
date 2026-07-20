@@ -2813,6 +2813,28 @@ html[dir="rtl"] .auth-toggle#rtlToggle {
   margin-bottom: 18px
 }
 
+.service-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px
+}
+
+.service-feature-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 3px 0;
+  font-size: .9rem;
+  color: var(--color-text)
+}
+
+.service-feature-list li i {
+  color: var(--color-primary);
+  font-size: .8rem;
+  margin-top: 5px;
+  flex-shrink: 0
+}
+
 .service-card .service-link {
   font-weight: 700;
   color: var(--color-primary);
