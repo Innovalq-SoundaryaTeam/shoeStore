@@ -147,6 +147,18 @@ img {
   gap: .25rem
 }
 
+@media (min-width: 1200px) {
+  .site-nav .navbar-collapse {
+    gap: .6rem
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .site-nav .navbar-collapse {
+    gap: .3rem
+  }
+}
+
 .site-nav .nav-link {
   position: relative;
   font-weight: 500;
