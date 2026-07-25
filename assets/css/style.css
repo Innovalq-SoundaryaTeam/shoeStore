@@ -243,7 +243,7 @@ body.page-shop .nav-search {
 
 .nav-search .form-control {
   border-radius: 50px 0 0 50px;
-  border-right: none
+  border-inline-end: none
 }
 
 .btn-search {
@@ -1674,7 +1674,7 @@ html:not([dir="rtl"]) .accordion-button::after {
 .toast-mini {
   position: fixed;
   bottom: 24px;
-  right: 24px;
+  inset-inline-end: 24px;
   background: #1B2A4A;
   color: #fff;
   padding: .9rem 1.3rem;
@@ -1943,7 +1943,7 @@ html[dir="rtl"] .auth-toggle#rtlToggle {
 .admin-sidebar {
   background: var(--sidebar-bg);
   color: var(--sidebar-text);
-  border-right: 1px solid var(--sidebar-border);
+  border-inline-end: 1px solid var(--sidebar-border);
   padding: 24px 18px;
   position: sticky;
   top: 0;
@@ -2408,7 +2408,7 @@ html[dir="rtl"] .auth-toggle#rtlToggle {
 }
 
 .checkout-hero .section-title {
-  text-align: left;
+  text-align: start;
   margin-bottom: .25rem
 }
 
@@ -2450,7 +2450,7 @@ html[dir="rtl"] .auth-toggle#rtlToggle {
   background: var(--color-primary);
   color: #fff;
   font-size: .8rem;
-  margin-right: 8px
+  margin-inline-end: 8px
 }
 
 .checkout-summary-card {
@@ -2836,7 +2836,7 @@ html[dir="rtl"] .auth-toggle#rtlToggle {
 }
 
 .page-hero .section-title {
-  text-align: left;
+  text-align: start;
   margin-bottom: .25rem
 }
 

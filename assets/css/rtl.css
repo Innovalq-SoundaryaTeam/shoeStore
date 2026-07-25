@@ -10,6 +10,7 @@ html[dir="rtl"] .category-card span{left:auto;right:20px}
 html[dir="rtl"] .social a{margin-right:0;margin-left:.4rem}
 html[dir="rtl"] .admin-menu a,html[dir="rtl"] .admin-menu button{text-align:right}
 html[dir="rtl"] .admin-sidebar{inset:0 0 0 auto}
+html[dir="rtl"] .fa-arrow-right,html[dir="rtl"] .fa-arrow-left{transform:scaleX(-1)}
 @media(max-width:991px){
   html[dir="rtl"] .admin-sidebar{transform:translateX(100%)}
   html[dir="rtl"] .admin-sidebar.open{transform:translateX(0)}
