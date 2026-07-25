@@ -1511,7 +1511,7 @@ body.dark .btn-whatsapp-enquiry {
 .form-control,
 .form-select {
   border-radius: 8px;
-  padding: .7rem 1rem;
+  padding: .7rem 2.25rem .7rem 1rem;
   border: 1px solid var(--color-border);
   min-height: 44px
 }
@@ -1570,6 +1570,14 @@ body.dark .btn-whatsapp-enquiry {
 .countdown div span {
   font-size: .8rem;
   text-transform: uppercase
+}
+
+/* Accordion chevron on the leading (left) edge in LTR, matching the
+   requested layout. RTL keeps Bootstrap's own default (already left-side). */
+html:not([dir="rtl"]) .accordion-button::after {
+  order: -1;
+  margin-left: 0;
+  margin-right: .75rem
 }
 
 /* ===== RESPONSIVE ===== */
@@ -1710,13 +1718,22 @@ body.dark .btn-whatsapp-enquiry {
 
 .auth-toggle {
   position: fixed;
-  top: 22px;
+  top: 18px;
   right: 22px;
   z-index: 5;
-  background: var(--color-card);
-  border: 1px solid var(--color-border);
-  border-radius: 50%;
-  box-shadow: var(--shadow-sm)
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 1.15rem;
+  color: var(--color-text);
+  padding: .5rem .6rem;
+  transition: var(--t)
+}
+
+.auth-toggle:hover {
+  color: var(--color-primary);
+  transform: translateY(-2px)
 }
 
 .auth-toggle#rtlToggle {
