@@ -1572,12 +1572,26 @@ body.dark .btn-whatsapp-enquiry {
   text-transform: uppercase
 }
 
-/* Accordion chevron on the leading (left) edge in LTR, matching the
-   requested layout. RTL keeps Bootstrap's own default (already left-side). */
-html:not([dir="rtl"]) .accordion-button::after {
-  order: -1;
-  margin-left: 0;
-  margin-right: .75rem
+/* Accordion chevron pinned to the true left edge in both LTR and RTL.
+   Using absolute positioning instead of flex order/margin avoids the
+   flex-direction reversal under dir="rtl" leaving the icon stranded
+   next to the text instead of at the row's edge. */
+.accordion-button {
+  position: relative;
+  padding-left: 2.75rem !important
+}
+
+.accordion-button::after {
+  position: absolute;
+  left: 1rem;
+  right: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 !important
+}
+
+.accordion-button:not(.collapsed)::after {
+  transform: translateY(-50%) rotate(-180deg)
 }
 
 /* ===== RESPONSIVE ===== */
