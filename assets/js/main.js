@@ -1271,8 +1271,17 @@ loadDetail();
 /* ----- Cart panel (on products page #cart) ----- */
 function renderCart() {
   const list = document.getElementById('cartList');
+  const summaryCol = document.getElementById('cartSummaryCol');
   const cart = Cart.get();
-  if (!cart.length) { list.innerHTML = '<p class="text-muted">Your cart is empty.</p>'; document.getElementById('cartTotal').textContent = '$0'; return; }
+  if (!cart.length) {
+    list.className = 'col-12 text-center py-5';
+    list.innerHTML = '<i class="fa-solid fa-bag-shopping fa-3x text-muted mb-3"></i><p class="text-muted fs-5 mb-3">Your cart is empty.</p><a href="products.html" class="btn btn-outline-orange">Continue Shopping</a>';
+    if (summaryCol) summaryCol.classList.add('d-none');
+    document.getElementById('cartTotal').textContent = '$0';
+    return;
+  }
+  list.className = 'col-lg-8';
+  if (summaryCol) summaryCol.classList.remove('d-none');
   let tot = 0;
   list.innerHTML = cart.map(item => {
     const p = PRODUCTS.find(x => x.id === item.id); if (!p) return '';

@@ -1,5 +1,14 @@
 /* ===== RTL SUPPORT ===== */
-html[dir="rtl"] body{text-align:right}
+/* Nav/structure mirrors via the dir attribute, but body copy and bullet
+   lists stay left-aligned in their original reading order per spec. */
+html[dir="rtl"] body{text-align:left}
+html[dir="rtl"] .service-feature-list,
+html[dir="rtl"] .service-card p,
+html[dir="rtl"] .service-card h5,
+html[dir="rtl"] .pricing-card,
+html[dir="rtl"] .pricing-features{direction:ltr;text-align:left}
+html[dir="rtl"] .service-feature-list li,
+html[dir="rtl"] .pricing-features li{direction:ltr}
 html[dir="rtl"] .me-3{margin-right:0!important;margin-left:1rem!important}
 html[dir="rtl"] .ms-3{margin-left:0!important;margin-right:1rem!important}
 html[dir="rtl"] .brand-logo i{margin-right:0;margin-left:.4rem}
