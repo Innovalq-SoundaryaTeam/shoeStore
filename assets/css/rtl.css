@@ -32,7 +32,7 @@ html[dir="rtl"] .admin-sidebar{inset:0 0 0 auto}
 html[dir="rtl"] .fa-arrow-right,html[dir="rtl"] .fa-arrow-left{transform:scaleX(-1)}
 /* Accordion chevron: right side in LTR (default), mirrors to the left
    edge in RTL so it stays at the reading-end of the row either way. */
-html[dir="rtl"] .accordion-button{padding-right:1.25rem !important;padding-left:2.75rem !important;text-align:right}
+html[dir="rtl"] .accordion-button{padding-right:1.25rem !important;padding-left:2.75rem !important;text-align:right;justify-content:flex-end}
 html[dir="rtl"] .accordion-button::after{right:auto;left:1rem}
 html[dir="rtl"] .accordion-body{text-align:right}
 @media(max-width:991px){
