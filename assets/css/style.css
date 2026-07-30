@@ -1499,9 +1499,29 @@ body.dark .btn-whatsapp-enquiry {
   object-fit: contain
 }
 
-/* ===== BRAND WORDMARKS (text-based, no third-party logo artwork) ===== */
+/* ===== BRAND LOGO TILE (real logo image, white tile for contrast in dark mode) ===== */
+.brand-logo-tile {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto .6rem;
+  background: #fff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  box-shadow: var(--shadow-sm)
+}
+
+.brand-logo-tile img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain
+}
+
+/* ===== BRAND WORDMARKS (text fallback if the logo image fails to load) ===== */
 .brand-mark {
-  display: block;
+  display: none;
   margin: 0 auto .5rem;
   font-family: 'Montserrat', sans-serif;
   line-height: 1
