@@ -147,6 +147,7 @@ img {
 }
 
 .brand-logo-mark {
+  display: inline-block;
   height: 1em;
   width: auto;
   vertical-align: -.15em;
