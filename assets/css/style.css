@@ -1467,7 +1467,10 @@ body.dark .btn-whatsapp-enquiry {
 }
 
 .measuring-guide {
+  display: block;
   max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
   border-radius: 12px
 }
 
