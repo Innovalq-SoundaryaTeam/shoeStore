@@ -1670,13 +1670,13 @@ body.dark .btn-whatsapp-enquiry {
    next to the text instead of at the row's edge. */
 .accordion-button {
   position: relative;
-  padding-left: 2.75rem !important
+  padding-right: 2.75rem !important
 }
 
 .accordion-button::after {
   position: absolute;
-  left: 1rem;
-  right: auto;
+  right: 1rem;
+  left: auto;
   top: 50%;
   transform: translateY(-50%);
   margin: 0 !important
