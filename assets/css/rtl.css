@@ -3,6 +3,7 @@ html[dir="rtl"] body{text-align:right}
 html[dir="rtl"] .me-3{margin-right:0!important;margin-left:1rem!important}
 html[dir="rtl"] .ms-3{margin-left:0!important;margin-right:1rem!important}
 html[dir="rtl"] .brand-logo i{margin-right:0;margin-left:.4rem}
+html[dir="rtl"] .brand-logo-mark{margin-right:0;margin-left:.4rem}
 html[dir="rtl"] .nav-search .form-control{border-radius:0 50px 50px 0}
 html[dir="rtl"] .btn-search{border-radius:50px 0 0 50px}
 html[dir="rtl"] .cart-badge{right:auto;left:0}
