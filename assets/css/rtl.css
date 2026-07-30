@@ -12,7 +12,7 @@ html[dir="rtl"] .service-feature-list li,
 html[dir="rtl"] .pricing-features li{direction:ltr}
 /* Nav links mirror order, but the brand logo+name stays pinned to the
    true left edge of the navbar in both directions. */
-html[dir="rtl"] .site-nav .navbar-brand{order:3;direction:ltr}
+html[dir="rtl"] .site-nav .navbar-brand{order:-1;direction:ltr}
 /* Testimonial quotes/names are plain English strings; without forcing
    ltr here the bidi algorithm relocates trailing punctuation to the
    wrong end and the avatar/name flex row reverses. */
