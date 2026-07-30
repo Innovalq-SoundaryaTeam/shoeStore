@@ -77,6 +77,10 @@ img {
   background: var(--color-section)
 }
 
+.section-cta {
+  background: linear-gradient(135deg, rgba(255, 107, 53, .10), rgba(255, 107, 53, .03))
+}
+
 .section-title {
   font-size: 2rem;
   margin-bottom: .5rem
@@ -1080,23 +1084,20 @@ body.dark .btn-whatsapp-enquiry {
 /* ===== HORIZONTAL SCROLL ===== */
 .h-scroll {
   display: flex;
+  flex-wrap: wrap;
   gap: 1.2rem;
-  overflow-x: auto;
-  padding-bottom: 1rem;
-  scroll-snap-type: x mandatory
+  padding-bottom: 1rem
 }
 
 .h-scroll>* {
-  flex: 0 0 260px;
-  scroll-snap-align: start
+  flex: 0 0 260px
 }
 
 /* ===== FOOTER ===== */
 .site-footer {
   background: #1B2A4A;
   color: #cbd5e1;
-  padding: 60px 0 30px;
-  margin-top: 60px
+  padding: 60px 0 30px
 }
 
 .site-footer h5,
@@ -1140,8 +1141,14 @@ body.dark .btn-whatsapp-enquiry {
   transition: var(--t)
 }
 
-.social a:hover {
+.social a i {
+  color: inherit
+}
+
+.social a:hover,
+.social a:hover i {
   background: var(--color-primary);
+  color: #ffffff !important;
   transform: translateY(-3px)
 }
 
@@ -1675,7 +1682,7 @@ body.dark .btn-whatsapp-enquiry {
   }
 
   .h-scroll>* {
-    flex: 0 0 80%
+    flex: 1 1 45%
   }
 
   * {
