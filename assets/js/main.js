@@ -494,7 +494,13 @@ function render() {
   const feat = document.getElementById('featuredGrid');
   if (feat) { feat.innerHTML = PRODUCTS.slice(0, 4).map(p => `<div class="col-sm-6 col-lg-3">${productCard(p)}</div>`).join(''); }
   const arrivals = document.getElementById('arrivalsScroll');
-  if (arrivals) { arrivals.innerHTML = PRODUCTS.slice().reverse().map(productCard).join(''); }
+  if (arrivals) {
+    // Cap at a multiple of 4 (desktop's per-row count) so the grid never
+    // ends with a single orphaned card on its own row.
+    const arrivalItems = PRODUCTS.slice().reverse();
+    const evenCount = Math.floor(arrivalItems.length / 4) * 4 || arrivalItems.length;
+    arrivals.innerHTML = arrivalItems.slice(0, evenCount).map(productCard).join('');
+  }
   // Products page
   const grid = document.getElementById('productsGrid');
   if (grid) { renderProducts(); }
