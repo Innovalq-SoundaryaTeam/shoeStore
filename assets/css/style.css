@@ -1857,6 +1857,7 @@ html[dir="rtl"] .auth-toggle {
 
 html[dir="rtl"] .auth-toggle#rtlToggle {
   left: 64px;
+  right: auto;
 }
 
 .auth-card {
