@@ -234,6 +234,24 @@ document.getElementById('newsletterForm')?.addEventListener('submit', e => {
   input.value = '';
 });
 
+/* ----- Home 2 business quote form ----- */
+document.getElementById('bizQuoteForm')?.addEventListener('submit', e => {
+  e.preventDefault();
+  const form = e.target;
+  const msg = document.getElementById('bizQuoteMsg');
+  if (!form.checkValidity()) {
+    form.reportValidity();
+    msg.textContent = 'Please fill in all fields.';
+    msg.classList.remove('success');
+    msg.classList.add('error');
+    return;
+  }
+  msg.textContent = "Thanks — we'll email your quote within 24-48 hours.";
+  msg.classList.remove('error');
+  msg.classList.add('success');
+  form.reset();
+});
+
 /* ----- Product card builder ----- */
 function productCard(product) {
   return `<div class="card-shoe">

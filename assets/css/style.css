@@ -3233,3 +3233,106 @@ html[dir="rtl"] .auth-toggle#rtlToggle {
   font-weight: 800;
   margin: 0 auto 16px
 }
+
+/* ===== HOME 2 (business landing) redesign ===== */
+.biz-hero-proof div {
+  display: flex;
+  flex-direction: column
+}
+
+.biz-hero-proof strong {
+  font-size: 1.3rem;
+  font-weight: 800
+}
+
+.biz-hero-proof span {
+  color: rgba(255, 255, 255, .65);
+  font-size: .82rem
+}
+
+.quote-card {
+  background: var(--color-card, #fff);
+  color: var(--color-text);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: var(--shadow-md)
+}
+
+.quote-card h5 {
+  color: var(--color-text)
+}
+
+.biz-audience-card {
+  height: 100%;
+  padding: 26px 22px;
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  text-align: center;
+  transition: var(--t)
+}
+
+.biz-audience-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-sm)
+}
+
+.biz-audience-card i {
+  font-size: 1.6rem;
+  color: var(--color-primary);
+  margin-bottom: 12px
+}
+
+.biz-compare-table {
+  --bs-table-bg: transparent;
+  border-radius: 12px;
+  overflow: hidden
+}
+
+.biz-compare-table th,
+.biz-compare-table td {
+  color: var(--color-text);
+  border-color: var(--color-border)
+}
+
+.biz-compare-table thead th {
+  font-size: .85rem;
+  text-transform: uppercase;
+  letter-spacing: .03em;
+  color: var(--color-muted)
+}
+
+.biz-compare-table tbody td:nth-child(3) {
+  color: var(--color-primary);
+  font-weight: 700
+}
+
+.case-study-card {
+  background: var(--color-card, #fff);
+  border-radius: 16px;
+  padding: 36px;
+  box-shadow: var(--shadow-sm)
+}
+
+.case-metric {
+  display: flex;
+  align-items: baseline;
+  gap: .6rem;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--color-border)
+}
+
+.case-metric:last-child {
+  border-bottom: none
+}
+
+.case-metric .num {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  min-width: 64px
+}
+
+.case-metric .label {
+  color: var(--color-muted);
+  font-size: .9rem
+}

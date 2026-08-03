@@ -64,153 +64,136 @@
     </div>
   </nav>
 
-  <!-- ===== BUSINESS HERO ===== -->
+  <!-- ===== HERO + INLINE QUOTE FORM ===== -->
   <section class="biz-hero">
     <div class="container">
       <div class="row align-items-center g-5">
-        <div class="col-lg-7">
+        <div class="col-lg-6">
           <span class="badge badge-orange mb-3">SoleHaus for Business</span>
-          <h1 class="mb-3">Footwear programs, built for teams &amp; brands.</h1>
-          <p class="lead">Bulk shoe orders, corporate gifting, event sponsorships — one account manager, volume
-            pricing, and delivery that fits your timeline.</p>
-          <div class="d-flex flex-wrap gap-3 mt-4">
-            <a href="contact.html?product=Bulk%20Order%20Enquiry" class="btn btn-primary-orange btn-lg">Get a Bulk
-              Quote</a>
-            <a href="services.html" class="btn btn-outline-orange btn-lg">View All Services</a>
+          <h1 class="mb-3">Get your whole team in the right shoes — without the back-and-forth.</h1>
+          <p class="lead">Tell us your pair count and industry below. A dedicated account manager replies with
+            real volume pricing within 24-48 hours — no account setup, no sales calls required to get a number.</p>
+          <div class="d-flex flex-wrap gap-4 mt-4 biz-hero-proof">
+            <div><strong>500+</strong><span>businesses outfitted</span></div>
+            <div><strong>50K+</strong><span>pairs delivered</span></div>
+            <div><strong>24-48h</strong><span>quote turnaround</span></div>
           </div>
         </div>
+        <div class="col-lg-6">
+          <div class="quote-card">
+            <h5 class="mb-1">Request a Bulk Quote</h5>
+            <p class="text-muted mb-3">No commitment — just a real number.</p>
+            <form id="bizQuoteForm" novalidate>
+              <div class="row g-2">
+                <div class="col-sm-6"><input type="text" class="form-control" placeholder="Company name" required></div>
+                <div class="col-sm-6"><input type="text" class="form-control" placeholder="Your name" required></div>
+                <div class="col-sm-6"><input type="email" class="form-control" placeholder="Work email" required></div>
+                <div class="col-sm-6">
+                  <select class="form-select" required>
+                    <option value="" selected disabled>Pairs needed</option>
+                    <option>20-49</option>
+                    <option>50-199</option>
+                    <option>200+</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <select class="form-select" required>
+                    <option value="" selected disabled>Industry</option>
+                    <option>Retail / Hospitality</option>
+                    <option>Corporate Office</option>
+                    <option>School / Sports Club</option>
+                    <option>Event / Sponsorship</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary-orange w-100 mt-3">Get My Quote</button>
+              <small class="form-msg d-block mt-2" id="bizQuoteMsg"></small>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHO WE WORK WITH ===== -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title text-center">Built for how your business actually orders</h2>
+      <p class="section-sub text-center">Different teams need different things — pick what matches you</p>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="biz-audience-card">
+            <i class="fa-solid fa-store"></i>
+            <h5>Retail &amp; Hospitality</h5>
+            <p class="text-muted">Uniform-standard footwear across multiple locations, one consolidated invoice.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="biz-audience-card">
+            <i class="fa-solid fa-building"></i>
+            <h5>Corporate Offices</h5>
+            <p class="text-muted">Onboarding kits, client gifting and branded packaging for staff and clients.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="biz-audience-card">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <h5>Schools &amp; Sports Clubs</h5>
+            <p class="text-muted">Bulk sizing across age groups, with an online sizing form your parents can use.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="biz-audience-card">
+            <i class="fa-solid fa-calendar-star"></i>
+            <h5>Events &amp; Sponsorships</h5>
+            <p class="text-muted">Time-boxed bulk delivery for launches, expos and sponsored events.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RETAIL VS BUSINESS PRICING ===== -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="row align-items-center g-5">
         <div class="col-lg-5">
-          <img src="../assets/images/misc/store-interior.webp" alt="SoleHaus business fulfillment"
-            class="rounded-media">
+          <h2 class="section-title">What changes when you order as a business</h2>
+          <p class="section-sub">Same product catalog, a completely different process behind it.</p>
+        </div>
+        <div class="col-lg-7">
+          <div class="table-responsive">
+            <table class="table biz-compare-table align-middle">
+              <thead><tr><th></th><th>Retail Checkout</th><th>Business Account</th></tr></thead>
+              <tbody>
+                <tr><td>Pricing</td><td>List price</td><td>Volume discount, 20+ pairs</td></tr>
+                <tr><td>Invoicing</td><td>Per order</td><td>One consolidated invoice</td></tr>
+                <tr><td>Sizing</td><td>Self-service</td><td>Team sizing sheet / on-site fitting</td></tr>
+                <tr><td>Support</td><td>General support queue</td><td>Dedicated account manager</td></tr>
+                <tr><td>Packaging</td><td>Standard</td><td>Branded gifting available</td></tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== STATS ===== -->
+  <!-- ===== CASE STUDY ===== -->
   <section class="section">
     <div class="container">
-      <div class="row g-4">
-        <div class="col-6 col-lg-3">
-          <div class="biz-stat"><div class="num">500+</div><div class="label">Businesses Outfitted</div></div>
-        </div>
-        <div class="col-6 col-lg-3">
-          <div class="biz-stat"><div class="num">50K+</div><div class="label">Pairs Delivered</div></div>
-        </div>
-        <div class="col-6 col-lg-3">
-          <div class="biz-stat"><div class="num">15%</div><div class="label">Avg. Volume Discount</div></div>
-        </div>
-        <div class="col-6 col-lg-3">
-          <div class="biz-stat"><div class="num">24-48h</div><div class="label">Quote Turnaround</div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== HOW IT WORKS ===== -->
-  <section class="section section-alt">
-    <div class="container">
-      <h2 class="section-title text-center">How It Works</h2>
-      <p class="section-sub text-center">From first quote to delivery, in four steps</p>
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-3">
-          <div class="biz-step">
-            <div class="step-num-lg">1</div>
-            <h5>Tell Us Your Needs</h5>
-            <p class="text-muted">Sizes, styles, quantities and timeline — share as much or as little as you have.</p>
+      <div class="case-study-card">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-4">
+            <div class="case-metric"><div class="num">140</div><div class="label">pairs delivered</div></div>
+            <div class="case-metric"><div class="num">6</div><div class="label">retail locations</div></div>
+            <div class="case-metric"><div class="num">3 wks</div><div class="label">start to finish</div></div>
           </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="biz-step">
-            <div class="step-num-lg">2</div>
-            <h5>Get a Custom Quote</h5>
-            <p class="text-muted">Your account manager sends volume pricing within 24-48 hours.</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="biz-step">
-            <div class="step-num-lg">3</div>
-            <h5>We Handle Sizing</h5>
-            <p class="text-muted">Upload a sizing sheet or have your team complete it online — we consolidate it
-              all.</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="biz-step">
-            <div class="step-num-lg">4</div>
-            <h5>Delivered On Schedule</h5>
-            <p class="text-muted">One invoice, optional branded packaging, and delivery scheduled around your
-              date.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== FEATURED BUSINESS SERVICES ===== -->
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title text-center">Popular with Business Clients</h2>
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-4">
-          <a href="service-details.html?service=bulk-orders" class="d-block text-reset text-decoration-none service-card-link">
-            <div class="service-card">
-              <div class="service-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
-              <h5>Bulk &amp; Corporate Orders</h5>
-              <p>Volume pricing and a dedicated account manager for 20+ pairs.</p>
-              <ul class="service-feature-list">
-                <li><i class="fa-solid fa-check"></i>Volume pricing for 20+ pairs</li>
-                <li><i class="fa-solid fa-check"></i>Dedicated account manager</li>
-                <li><i class="fa-solid fa-check"></i>Flexible consolidated invoicing</li>
-              </ul>
-              <span class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></span>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <a href="service-details.html?service=gift-wrapping" class="d-block text-reset text-decoration-none service-card-link">
-            <div class="service-card">
-              <div class="service-icon"><i class="fa-solid fa-gift"></i></div>
-              <h5>Corporate Gifting</h5>
-              <p>Branded boxes and one consolidated invoice for client or staff gifting.</p>
-              <ul class="service-feature-list">
-                <li><i class="fa-solid fa-check"></i>Premium branded gift boxes</li>
-                <li><i class="fa-solid fa-check"></i>Personalized gift notes</li>
-                <li><i class="fa-solid fa-check"></i>One consolidated invoice</li>
-              </ul>
-              <span class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></span>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <a href="service-details.html?service=custom-fitting" class="d-block text-reset text-decoration-none service-card-link">
-            <div class="service-card">
-              <div class="service-icon"><i class="fa-solid fa-ruler-combined"></i></div>
-              <h5>Team Fitting Days</h5>
-              <p>On-site fitting specialists for offices, teams and events.</p>
-              <ul class="service-feature-list">
-                <li><i class="fa-solid fa-check"></i>On-site fitting specialists</li>
-                <li><i class="fa-solid fa-check"></i>True-to-size &amp; width measurement</li>
-                <li><i class="fa-solid fa-check"></i>Scheduled around your event</li>
-              </ul>
-              <span class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== TESTIMONIAL ===== -->
-  <section class="section section-alt">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-8 text-center">
-          <div class="review mx-auto" style="max-width:640px">
-            <div class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-                class="fa fa-star"></i><i class="fa fa-star"></i></div>
-            <p>"SoleHaus outfitted our entire retail staff — 140 pairs across six locations — in under three weeks.
-              One invoice, one point of contact, zero headaches."</p>
+          <div class="col-lg-8">
+            <span class="badge bg-warning text-dark mb-2">CASE STUDY</span>
+            <p class="lead mb-3">"SoleHaus outfitted our entire retail staff — 140 pairs across six locations — in
+              under three weeks. One invoice, one point of contact, zero headaches."</p>
             <div class="review-author"><img src="../assets/images/testimonials/michael-r.jpg" alt="Michael R."><b>Michael
                 R., Operations Manager</b></div>
           </div>
@@ -222,10 +205,12 @@
   <!-- ===== CTA BANNER ===== -->
   <section class="section section-cta">
     <div class="container text-center">
-      <h3 class="mb-2">Ready to outfit your team?</h3>
-      <p class="text-muted mb-4">Tell us what you need and we'll come back with a quote in 24-48 hours.</p>
-      <a href="contact.html?product=Bulk%20Order%20Enquiry" class="btn btn-primary-orange btn-lg">Get a Bulk
-        Quote</a>
+      <h3 class="mb-2">Ready to see your number?</h3>
+      <p class="text-muted mb-4">Scroll up to the quote form, or talk to a specialist directly.</p>
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="#bizQuoteForm" class="btn btn-primary-orange btn-lg">Request a Quote</a>
+        <a href="contact.html?product=Bulk%20Order%20Enquiry" class="btn btn-outline-orange btn-lg">Talk to a Specialist</a>
+      </div>
     </div>
   </section>
 
