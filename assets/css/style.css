@@ -1828,8 +1828,9 @@ body.dark .btn-whatsapp-enquiry {
 
 .auth-toggle {
   position: absolute;
-  top: 18px;
+  top: 50%;
   right: 18px;
+  transform: translateY(-50%);
   z-index: 5;
   background: transparent;
   border: none;
@@ -1843,7 +1844,7 @@ body.dark .btn-whatsapp-enquiry {
 
 .auth-toggle:hover {
   color: var(--color-primary);
-  transform: translateY(-2px)
+  transform: translateY(calc(-50% - 2px))
 }
 
 .auth-toggle#rtlToggle {
@@ -1872,6 +1873,7 @@ html[dir="rtl"] .auth-toggle#rtlToggle {
 }
 
 .auth-logo {
+  position: relative;
   text-align: center;
   margin-bottom: 24px
 }
