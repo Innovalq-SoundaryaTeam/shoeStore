@@ -23,6 +23,10 @@ html[dir="rtl"] .fa-arrow-right,html[dir="rtl"] .fa-arrow-left{transform:scaleX(
 html[dir="rtl"] .accordion-button{padding-right:1.25rem !important;padding-left:2.75rem !important;text-align:right;justify-content:flex-start}
 html[dir="rtl"] .accordion-button::after{right:auto;left:1rem}
 html[dir="rtl"] .accordion-body{text-align:right}
+/* Numbered instructional steps (Size Guide) keep their markers on the
+   true left, since the marker's logical side follows direction, not
+   text-align. */
+html[dir="rtl"] .measure-steps{direction:ltr;text-align:left}
 @media(max-width:991px){
   html[dir="rtl"] .admin-sidebar{transform:translateX(100%)}
   html[dir="rtl"] .admin-sidebar.open{transform:translateX(0)}
