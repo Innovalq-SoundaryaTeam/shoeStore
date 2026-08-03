@@ -1827,9 +1827,9 @@ body.dark .btn-whatsapp-enquiry {
 }
 
 .auth-toggle {
-  position: fixed;
+  position: absolute;
   top: 18px;
-  right: 22px;
+  right: 18px;
   z-index: 5;
   background: transparent;
   border: none;
@@ -1847,19 +1847,20 @@ body.dark .btn-whatsapp-enquiry {
 }
 
 .auth-toggle#rtlToggle {
-  right: 68px;
+  right: 64px;
 }
 
 html[dir="rtl"] .auth-toggle {
   right: auto;
-  left: 22px;
+  left: 18px;
 }
 
 html[dir="rtl"] .auth-toggle#rtlToggle {
-  left: 68px;
+  left: 64px;
 }
 
 .auth-card {
+  position: relative;
   width: min(440px, calc(100% - 32px));
   margin: 0 auto;
   background: var(--color-card);
