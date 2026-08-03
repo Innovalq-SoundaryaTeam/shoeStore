@@ -1,24 +1,15 @@
 /* ===== RTL SUPPORT ===== */
-/* English sentences contain punctuation (periods, quotes, exclamation
-   marks) that the Unicode bidi algorithm visually relocates whenever a
-   container's direction is rtl — e.g. "Priya S." becomes ".Priya S".
-   To avoid corrupting text, only the nav (short, punctuation-free
-   labels) and Home 2 (explicitly approved full mirror) use
-   direction:rtl. Everywhere else "mirrors" via text-align/
-   justify-content only, keeping direction:ltr so characters stay put. */
-html[dir="rtl"] body{direction:ltr;text-align:right}
+/* Only the nav mirrors structurally when the toggle is clicked. Body
+   copy (headings, paragraphs, testimonials, lists) never re-aligns —
+   it stays exactly as it reads in LTR, on every page except Home 2,
+   which is the one page explicitly approved to fully mirror. */
+html[dir="rtl"] body{direction:ltr;text-align:left}
 html[dir="rtl"] .site-nav{direction:rtl}
 html[dir="rtl"] .site-nav .navbar-brand{order:-1;direction:ltr}
 
 /* Home 2 (business landing) is the one page whose content fully mirrors. */
 html[dir="rtl"] body.page-home2{direction:rtl;text-align:right}
 html[dir="rtl"] .page-home2 .review-author{direction:rtl;text-align:right}
-
-/* Testimonials elsewhere: keep quotes/names intact, just nudge the
-   avatar+name block to the right so it still reads as mirrored. */
-html[dir="rtl"] .review,
-html[dir="rtl"] .review-author{direction:ltr}
-html[dir="rtl"] .review-author{justify-content:flex-end}
 
 html[dir="rtl"] .me-3{margin-right:0!important;margin-left:1rem!important}
 html[dir="rtl"] .ms-3{margin-left:0!important;margin-right:1rem!important}
