@@ -18,16 +18,6 @@ html[dir="rtl"] .site-nav .navbar-brand{order:-1;direction:ltr}
    wrong end and the avatar/name flex row reverses. */
 html[dir="rtl"] .review,
 html[dir="rtl"] .review-author{direction:ltr;text-align:left}
-/* Home 2 (business landing) is the exception: its content should fully
-   mirror in RTL rather than staying left, per explicit request. */
-html[dir="rtl"] .biz-hero,
-html[dir="rtl"] .quote-card,
-html[dir="rtl"] .biz-audience-card,
-html[dir="rtl"] .biz-compare-table,
-html[dir="rtl"] .case-study-card,
-html[dir="rtl"] .case-metric,
-html[dir="rtl"] .case-study-card .review-author{direction:rtl;text-align:right}
-html[dir="rtl"] .case-metric{flex-direction:row-reverse;justify-content:flex-end}
 html[dir="rtl"] .me-3{margin-right:0!important;margin-left:1rem!important}
 html[dir="rtl"] .ms-3{margin-left:0!important;margin-right:1rem!important}
 html[dir="rtl"] .brand-logo i{margin-right:0;margin-left:.4rem}
