@@ -1880,6 +1880,7 @@ html[dir="rtl"] .auth-toggle#rtlToggle {
 
 .auth-logo .brand-logo {
   justify-content: center;
+  align-items: center;
   display: inline-flex
 }
 
